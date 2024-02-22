@@ -1,0 +1,38 @@
+diff --git a/node_modules/nest-puppeteer/dist/interfaces/puppeteer-options.interface.d.ts b/node_modules/nest-puppeteer/dist/interfaces/puppeteer-options.interface.d.ts
+index 281267d..cef0e5f 100644
+--- a/node_modules/nest-puppeteer/dist/interfaces/puppeteer-options.interface.d.ts
++++ b/node_modules/nest-puppeteer/dist/interfaces/puppeteer-options.interface.d.ts
+@@ -1,11 +1,11 @@
+ import { ModuleMetadata, Type } from '@nestjs/common/interfaces';
+-import type { LaunchOptions } from 'puppeteer';
++import type { LaunchOptions, BrowserLaunchArgumentOptions, BrowserConnectOptions } from 'puppeteer';
+ /**
+  * Options that ultimately need to be provided to create a Puppeteer instance
+  */
+ export interface PuppeteerModuleOptions {
+     instanceName?: string;
+-    launchOptions?: LaunchOptions;
++    launchOptions?: LaunchOptions & BrowserLaunchArgumentOptions & BrowserConnectOptions;
+ }
+ export interface PuppeteerOptionsFactory {
+     createPuppeteerOptions(): Promise<PuppeteerModuleOptions> | PuppeteerModuleOptions;
+diff --git a/node_modules/nest-puppeteer/dist/puppeteer-core.module.d.ts b/node_modules/nest-puppeteer/dist/puppeteer-core.module.d.ts
+index 1842167..8754cfd 100644
+--- a/node_modules/nest-puppeteer/dist/puppeteer-core.module.d.ts
++++ b/node_modules/nest-puppeteer/dist/puppeteer-core.module.d.ts
+@@ -1,13 +1,13 @@
+ import { DynamicModule, OnApplicationShutdown, OnModuleDestroy } from '@nestjs/common';
+ import { ModuleRef } from '@nestjs/core';
+-import type { LaunchOptions } from 'puppeteer';
++import type { LaunchOptions, BrowserLaunchArgumentOptions, BrowserConnectOptions } from 'puppeteer';
+ import type { PuppeteerModuleAsyncOptions } from './interfaces/puppeteer-options.interface';
+ export declare class PuppeteerCoreModule implements OnApplicationShutdown, OnModuleDestroy {
+     private readonly instanceName;
+     private readonly moduleRef;
+     constructor(instanceName: string, moduleRef: ModuleRef);
+     onApplicationShutdown(): Promise<void>;
+-    static forRoot(launchOptions?: LaunchOptions, instanceName?: string): DynamicModule;
++    static forRoot(launchOptions?: LaunchOptions & BrowserLaunchArgumentOptions & BrowserConnectOptions, instanceName?: string): DynamicModule;
+     static forRootAsync(options: PuppeteerModuleAsyncOptions): DynamicModule;
+     onModuleDestroy(): Promise<void>;
+     private static createAsyncProviders;

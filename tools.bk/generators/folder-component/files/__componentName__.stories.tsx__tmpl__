@@ -1,0 +1,47 @@
+import React from 'react';
+import styled from 'styled-components';
+
+import { <%= componentName %> } from './<%= componentName %>';
+
+export default {
+  title: '<%= componentName %>',
+  component: <%= componentName %>,
+};
+
+const H1 = styled.div`
+  margin: 10px 0;
+  font-family: ${({ theme }) => theme.font.circular};
+`;
+
+const renderer = () => (
+  <div>
+    <H1><%= componentName %></H1>
+    <div style={{ backgroundColor: 'white' }}>
+      <<%= componentName %> />
+    </div>
+  </div>
+);
+
+export const onDesktop = () => renderer();
+
+onDesktop.parameters = {
+  viewport: {
+    defaultViewport: 'desktop',
+  },
+};
+
+export const onTablet = () => renderer();
+
+onTablet.parameters = {
+  viewport: {
+    defaultViewport: 'tablet',
+  },
+};
+
+export const onMobile = () => renderer();
+
+onMobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile',
+  },
+};

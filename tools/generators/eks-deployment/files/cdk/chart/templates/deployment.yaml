@@ -1,0 +1,143 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "<%= name %>-service.fullname" . }}
+  labels:
+    {{- include "<%= name %>-service.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "<%= name %>-service.selectorLabels" . | nindent 6 }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 0
+  template:
+    metadata:
+      annotations:
+      {{- with .Values.podAnnotations }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+        # https://helm.sh/docs/howto/charts_tips_and_tricks/#automatically-roll-deployments
+        rollme: {{ randAlphaNum 5 | quote }}
+      labels:
+        {{- include "<%= name %>-service.selectorLabels" . | nindent 8 }}
+        {{ include "<%= name %>-service.datadogTags" . | nindent 8}}
+        runs-on: fargate
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "<%= name %>-service.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: {{ .Chart.Name }}
+          lifecycle:
+            preStop:
+              exec:
+                command: ['/bin/sleep', '15']
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          envFrom:
+            - configMapRef:
+                name: {{ include "<%= name %>-service.fullname" . }}
+            {{ if .Values.env.secret }}
+            - secretRef:
+                name: {{ include "<%= name %>-service.fullname" . }}
+            {{- end }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.healthCheck.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: {{ .Values.healthCheck.path }}
+              port: {{ .Values.healthCheck.port }}
+              scheme: HTTP
+          readinessProbe:
+            httpGet:
+              path: {{ .Values.healthCheck.path }}
+              port: {{ .Values.healthCheck.port }}
+              scheme: HTTP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+        ## Running the Agent as a sidecar
+        - image: public.ecr.aws/datadog/agent:latest
+          name: datadog-agent
+          ports:
+            - containerPort: 8126
+              name: traceport
+              protocol: TCP
+          env:
+            - name: DD_ENV
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/env']
+            - name: DD_SERVICE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/service']
+            - name: DD_VERSION
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/version']
+            - name: DD_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "<%= name %>-service.fullname" . }}
+                  key: DD_API_KEY
+                  optional: false
+            - name: DD_SITE
+              value: "datadoghq.com"
+            - name: DD_CLUSTER_AGENT_ENABLED
+              value: "true"
+            - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "<%= name %>-service.fullname" . }}
+                  key: DD_CLUSTER_AGENT_AUTH_TOKEN
+                  optional: false
+            - name: DD_ORCHESTRATOR_EXPLORER_ENABLED # Required to get Kubernetes resources view
+              value: "true"
+            - name: DD_EKS_FARGATE
+              value: "true"
+            - name: DD_CLUSTER_AGENT_URL
+              value: https://datadog-cluster-agent.datadog-agent.svc.cluster.local:5005
+            - name: DD_CLUSTER_NAME
+              value: {{ .Values.clusterName }}
+            - name: DD_APM_ENABLED
+              value: "true"
+            - name: DD_KUBERNETES_KUBELET_NODENAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: spec.nodeName
+            - name: DD_APM_IGNORE_RESOURCES
+              value: GET {{ .Values.healthCheck.path }}, POST /profiling/v1/input
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "50m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

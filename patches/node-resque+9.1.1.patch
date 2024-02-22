@@ -1,0 +1,31 @@
+diff --git a/node_modules/node-resque/dist/core/connection.js b/node_modules/node-resque/dist/core/connection.js
+index 74a5347..6402504 100644
+--- a/node_modules/node-resque/dist/core/connection.js
++++ b/node_modules/node-resque/dist/core/connection.js
+@@ -85,16 +85,20 @@ class Connection extends events_1.EventEmitter {
+             count = this.options.scanCount || 10;
+         }
+         if (this.redis && typeof this.redis.scan === "function") {
+-            const [newCursor, matches] = await this.redis.scan(cursor, "match", match, "count", count);
+-            if (matches && matches.length > 0) {
+-                keysAry = keysAry.concat(matches);
++            while (true) {
++                const [newCursor, matches] = await this.redis.scan(cursor, "match", match, "count", count);
++                if (matches && matches.length > 0) {
++                    keysAry = keysAry.concat(matches);
++                }
++                if (newCursor === "0")
++                    return keysAry;
++                cursor = parseInt(newCursor);
++                await new Promise(resolve => setTimeout(resolve, 0));
+             }
+-            if (newCursor === "0")
+-                return keysAry;
+-            return this.getKeys(match, count, keysAry, parseInt(newCursor));
+         }
+         this.emit("error", new Error("You must establish a connection to redis before running the getKeys command."));
+     }
++
+     end() {
+         Object.keys(this.listeners).forEach((eventName) => {
+             this.redis.removeAllListeners(eventName);

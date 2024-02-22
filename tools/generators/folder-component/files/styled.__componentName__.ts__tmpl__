@@ -1,0 +1,13 @@
+import styled, { css } from 'styled-components';
+
+const <%= componentName %> = styled.div((props) => {
+  const {} = props;
+
+  return css`
+    margin: 20px;
+  `;
+});
+
+export const S = {
+  <%= componentName %>,
+}

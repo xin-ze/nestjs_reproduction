@@ -1,0 +1,25 @@
+diff --git a/node_modules/generate-package-json-webpack-plugin/index.js b/node_modules/generate-package-json-webpack-plugin/index.js
+index 2660e71..88ac4ee 100644
+--- a/node_modules/generate-package-json-webpack-plugin/index.js
++++ b/node_modules/generate-package-json-webpack-plugin/index.js
+@@ -50,6 +50,20 @@ function GeneratePackageJsonPlugin(
+     for (const filename of allSourcePackageFilenames) {
+       logIfDebug(`${fileIndex++} : ${filename}`);
+       const extraSourcePackage = JSON.parse(fs.readFileSync(filename).toString());
++      if(filename.endsWith("-lock.json")){
++        for(const [dep, versionObj] of Object.entries(extraSourcePackage.dependencies)){
++          if(dep === basePackage.name){
++            continue;
++          }
++          extraSourcePackage.dependencies[dep] = versionObj.version;
++        }
++        // Use app sub dependencies if exist
++        if(extraSourcePackage.dependencies[basePackage.name]){
++          for(const [dep, versionObj] of Object.entries(extraSourcePackage.dependencies[basePackage.name].dependencies)){
++            extraSourcePackage.dependencies[dep] = versionObj.version;
++          }
++        }
++      }
+       Object.assign(sourcePackagesDependencyVersionMap, extraSourcePackage.dependencies ? extraSourcePackage.dependencies : {});
+     }
+   }

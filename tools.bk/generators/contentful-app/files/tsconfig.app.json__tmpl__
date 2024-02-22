@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "<%= offsetFromRoot %>dist/out-tsc",
+    "types": ["node"]
+  },
+  "files": [
+    "<%= offsetFromRoot %>node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "<%= offsetFromRoot %>node_modules/@nrwl/react/typings/image.d.ts"
+  ],
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+}

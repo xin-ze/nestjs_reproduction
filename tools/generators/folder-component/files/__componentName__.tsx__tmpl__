@@ -1,0 +1,32 @@
+import React from 'react';
+
+import { S } from './styled.<%= componentName %>';
+import { use<%= componentName %> } from './use<%= componentName %>';
+import { metaData } from './const.<%= componentName %>';
+import type { <%= componentName %>Props, <%= componentName %>HookProps } from './types.<%= componentName %>';
+
+/**
+ * <%= componentName %>Renderer
+ */
+export const <%= componentName %>Renderer = 
+  (props: <%= componentName %>Props & <%= componentName %>HookProps) => {
+    const {} = props;
+    return (
+      <S.<%= componentName %> title={metaData.componentName}>
+        Hello, {metaData.componentName}!
+      </S.<%= componentName %>>
+    );
+  };
+
+/**
+ * <%= componentName %>
+ */
+export const <%= componentName %> = (props: <%= componentName %>Props) => {
+  const hookProps = use<%= componentName %>(props);
+
+  if (hookProps.loading) {
+    return <div>Loading {metaData.componentName}...</div>;
+  }
+
+  return <<%= componentName %>Renderer {...props} {...hookProps} />;
+};

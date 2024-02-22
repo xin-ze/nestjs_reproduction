@@ -1,0 +1,167 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+.serverless
+
+# Do not commit copied sls component config of root folder
+/*serverless.yml
+
+.webpack
+.esbuild
+
+# compiled output
+**/dist
+/tmp
+/out-tsc
+
+# dependencies
+**/node_modules
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# VSCode local history files
+.history/
+
+# test coverage
+/coverage
+.nyc_output
+apps/seo-submodule/seo-payload-e2e/coverage
+
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+contentful-export*.json
+contentful-import*.json
+errors-*.log
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Local dev
+.env
+.env.*.local
+.env.local.*
+.local.env*
+*.local.js
+# nrwl nx default override for .env
+.local.env
+# nextjs default override for .env
+.env.local
+
+# signup
+apps/signup/proxy.conf.json
+
+# Nextjs apps
+.next/
+# .env supposed to be commited to repo
+!**/ui-content/.env
+!**/ui-expert-qna/.env
+!**/cms/.env
+!**/los/.env
+!**/webquotes/.env
+!**/seo-payload/.env
+
+# Cypress visual test diff
+__diff_output__
+
+# Pdf visual test diff
+*.new.png
+*.diff.png
+
+# Chrome extension
+apps/chrome-extension/build/*
+
+# Quoting specific
+apps/quoting/src/scripts/data.json
+apps/quoting/src/scripts/switch-price.json
+apps/quoting/src/scripts/branch-response.json
+apps/quoting/src/scripts/carrier_license_appointment_list.csv
+apps/quoting/src/scripts/carrier_license_appointment_list.json
+
+# Headless specific
+apps/headless/src/scripts/*.json
+apps/headless-worker/src/scripts/*.json
+!apps/headless/src/scripts/sample.json
+!apps/headless-worker/src/scripts/sample.json
+!apps/headless-worker/src/scripts/carrier_price_event_data_sample.json
+
+# Post bind
+apps/post-bind/src/scripts/*.json
+!apps/post-bind/src/scripts/policy-status-sample.json
+!apps/post-bind/src/scripts/retention-sample.json
+!apps/post-bind/src/scripts/post-bind-sample.json
+!apps/post-bind/src/scripts/process-adhoc-payment-sample.json
+
+# Headless ML
+__pycache__
+.requirements.zip
+venv/
+
+# Exclude testing data
+.data/dynamodb/*
+!.data/dynamodb/.gitkeep
+.data/s3/*
+!.data/s3/.gitkeep
+
+# Exclude generated graphql schemas
+schema*.gql
+graphql-schema.json
+
+# CDK
+cdk.context.json
+
+# Eslogs
+_es-logs/
+
+# husky config
+.huskyrc
+
+#pdf-ocr
+/apps/pdf-ocr/utils/
+
+#telematics ref data
+/apps/telematics/local_data/
+
+# vercel
+/.vercel
+
+# compodoc
+.doc
+
+# cube store
+/apps/content-analytics/.cubestore/
+
+# asdf tool
+.tool-versions
+
+# swx cache
+.swc/
+
+# local bash files
+*.local.sh
+
+# backup files
+seo-submodule-backup
+
+# git patch files
+*git-patch

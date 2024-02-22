@@ -1,0 +1,30 @@
+diff --git a/node_modules/@nestjs/core/repl/repl.d.ts b/node_modules/@nestjs/core/repl/repl.d.ts
+index 6928942..9d2ad9f 100644
+--- a/node_modules/@nestjs/core/repl/repl.d.ts
++++ b/node_modules/@nestjs/core/repl/repl.d.ts
+@@ -1,3 +1,3 @@
+ /// <reference types="node" />
+-import { Type } from '@nestjs/common';
+-export declare function repl(module: Type): Promise<import("repl").REPLServer>;
++import { INestApplicationContext, Type } from '@nestjs/common';
++export declare function repl(module: Type): Promise<{ replServer: import("repl").REPLServer; app: INestApplicationContext}>;
+diff --git a/node_modules/@nestjs/core/repl/repl.js b/node_modules/@nestjs/core/repl/repl.js
+index 322e4d2..fc116ba 100644
+--- a/node_modules/@nestjs/core/repl/repl.js
++++ b/node_modules/@nestjs/core/repl/repl.js
+@@ -14,6 +14,7 @@ async function repl(module) {
+         logger: new repl_logger_1.ReplLogger(),
+     });
+     await app.init();
++    await app.enableShutdownHooks();
+     const replContext = new repl_context_1.ReplContext(app);
+     common_1.Logger.log(constants_1.REPL_INITIALIZED_MESSAGE);
+     const _repl = await Promise.resolve().then(() => require('repl'));
+@@ -22,6 +23,6 @@ async function repl(module) {
+         ignoreUndefined: true,
+     });
+     (0, assign_to_object_util_1.assignToObject)(replServer.context, replContext.globalScope);
+-    return replServer;
++    return { replServer, app };
+ }
+ exports.repl = repl;

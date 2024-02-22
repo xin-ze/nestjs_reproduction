@@ -1,0 +1,97 @@
+{
+  "sourceRoot": "apps/content/src",
+  "projectType": "application",
+  "prefix": "content",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "options": {
+        "showCircularDependencies": true,
+        "outputPath": "dist/apps/content",
+        "main": "apps/content/src/main.ts",
+        "tsConfig": "apps/content/tsconfig.app.json",
+        "webpackConfig": "apps/content/webpack.nx.config.js",
+        "assets": ["apps/content/src/assets"],
+        "maxWorkers": 1,
+        "memoryLimit": 2048
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/content/src/environments/environment.ts",
+              "with": "apps/content/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "cwd": "apps/content/scripts",
+        "commands": ["./deploy-image", "./deploy-stack"],
+        "parallel": false
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "content:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "content:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/content/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/content/jest.config.ts",
+        "passWithNoTests": true,
+        "outputFile": "tmp/content.output.json"
+      },
+      "outputs": ["coverage/apps/content"]
+    },
+    "e2e": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "echo 'fixme: e2e test short-circuited because we need to serve seo-payload with mongodb, which is not working for now'",
+            "forwardAllArgs": false
+          }
+        ]
+      }
+    },
+    "e2e-test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/content/jest.e2e.config.ts",
+        "passWithNoTests": true,
+        "runInBand": true
+      },
+      "outputs": ["coverage/apps/content"]
+    },
+    "check-ts": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["npm run check-ts content"],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}

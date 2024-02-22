@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "<%= name %>-service.fullname" . }}
+  labels:
+    {{- include "<%= name %>-service.labels" . | nindent 4 }}
+data:
+  {{- range $key, $val := .Values.env.plain }}
+  {{ $key }}: {{ $val | quote}}
+  {{- end}}
+  VERSION: {{ .Values.image.tag }}

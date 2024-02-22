@@ -1,0 +1,14 @@
+{
+  "name": "serverless-plugin-lambda-insights",
+  "version": "1.0.0",
+  "description": "Add lambda insights",
+  "main": "index.js",
+  "keywords": [
+    "serverless plugin",
+    "serverless lambda insights"
+  ],
+  "author": "jerry",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}

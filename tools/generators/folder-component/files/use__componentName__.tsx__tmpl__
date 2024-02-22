@@ -1,0 +1,10 @@
+import type { <%= componentName %>Props, <%= componentName %>HookProps } from './types.<%= componentName %>';
+
+/**
+ * use<%= componentName %>
+ */
+export const use<%= componentName %> = (props: <%= componentName %>Props): <%= componentName %>HookProps => {
+  const {} = props;
+
+  return { loading: true };
+};

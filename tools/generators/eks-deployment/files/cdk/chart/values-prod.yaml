@@ -1,0 +1,39 @@
+clusterName: prodcluster
+ingress:
+  enabled: true
+  className: ""
+  annotations: 
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/healthcheck-path: <%= healthCheckPath %>
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:919341117301:certificate/d46222c5-cab3-42ab-b413-91a0d4d7ccae
+    alb.ingress.kubernetes.io/target-group-attributes: deregistration_delay.timeout_seconds=30
+    alb.ingress.kubernetes.io/tags: STAGE=prod,SERVICE=<%= name %>-service,Name=<%= name %>,Department=<%= team %>,Owner=<%= owner %>,DataSensitivity=<%= dataSensitivity %>
+    external-dns.alpha.kubernetes.io/hostname: <%= name %>-service-prod.ing.getjerry.com
+  hosts:
+    - paths:
+        - path: /
+          pathType: Prefix
+  tls: 
+    - secretName: <%= name %>-service-prod.ing.getjerry.com
+      hosts:
+        - <%= name %>-service-prod.ing.getjerry.com
+
+autoscaling:
+  enabled: true
+  minReplicas: 8
+  maxReplicas: 32
+  targetCPUUtilizationPercentage: 75
+  targetMemoryUtilizationPercentage: 80
+
+env:
+  plain:
+    release_env: prod
+    # DD_RUNTIME_METRICS_ENABLED: "true"
+    # DD_PROFILING_PROFILERS: "wall,space,cpu-experimental"
+  secret:
+    # Car DB
+    # CAR_PG_HOST: jerry-car-db.prod.rds-host

@@ -1,0 +1,25 @@
+diff --git a/node_modules/payload/dist/admin/components/views/collections/List/index.js b/node_modules/payload/dist/admin/components/views/collections/List/index.js
+index 5e920d4..56369f9 100644
+--- a/node_modules/payload/dist/admin/components/views/collections/List/index.js
++++ b/node_modules/payload/dist/admin/components/views/collections/List/index.js
+@@ -71,7 +71,7 @@ const ListView = (props) => {
+     const resetParams = (0, react_1.useCallback)((overrides = {}) => {
+         const params = {
+             depth: 0,
+-            draft: 'true',
++            draft: ['articles', 'seo-resource-template-pages'].includes(slug) ? undefined : 'true',
+             page: overrides === null || overrides === void 0 ? void 0 : overrides.page,
+             sort: overrides === null || overrides === void 0 ? void 0 : overrides.sort,
+             where: overrides === null || overrides === void 0 ? void 0 : overrides.where,
+diff --git a/node_modules/payload/dist/bin/generateTypes.js b/node_modules/payload/dist/bin/generateTypes.js
+index ec5cb97..bbe91cb 100644
+--- a/node_modules/payload/dist/bin/generateTypes.js
++++ b/node_modules/payload/dist/bin/generateTypes.js
+@@ -24,6 +24,7 @@ async function generateTypes() {
+     }).then((compiled) => {
+         fs_1.default.writeFileSync(outputFile, compiled);
+         logger.info(`Types written to ${outputFile}`);
++        process.exit(0);
+     });
+ }
+ exports.generateTypes = generateTypes;

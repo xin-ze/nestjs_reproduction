@@ -1,0 +1,23 @@
+diff --git a/node_modules/json-bigint-patch/dist/index.js b/node_modules/json-bigint-patch/dist/index.js
+index 3504d5c..64461dc 100644
+--- a/node_modules/json-bigint-patch/dist/index.js
++++ b/node_modules/json-bigint-patch/dist/index.js
+@@ -541,8 +541,16 @@ function json_parse(options) {
+                 const nonBigIntNum = Number(string);
+                 //if (number > 9007199254740992 || number < -9007199254740992)
+                 // BigInt has stricter check: everything with length > 15 digits disallowed
+-                if (Number.isInteger(nonBigIntNum) && !Number.isSafeInteger(nonBigIntNum))
+-                    return (_options.storeAsString === true) ? string : BigInt(string);
++                if (Number.isInteger(nonBigIntNum) && !Number.isSafeInteger(nonBigIntNum)) {
++                  let val = string;
++
++                    // BigInt('1e+21') will result in the error: Cannot convert 1e+21 to a BigInt
++                    // while BigInt(1e+21) works. So we convert it into number first
++                    if(string.match(/e/)) {
++                      val = nonBigIntNum;
++                    }
++                    return (_options.storeAsString === true) ? string : BigInt(val);
++                }
+                 return nonBigIntNum;
+             }
+         },

@@ -1,0 +1,13 @@
+diff --git a/node_modules/nestjs-throttler-storage-redis/dist/throttler-storage-redis.service.js b/node_modules/nestjs-throttler-storage-redis/dist/throttler-storage-redis.service.js
+index a7351c7..ab3745f 100644
+--- a/node_modules/nestjs-throttler-storage-redis/dist/throttler-storage-redis.service.js
++++ b/node_modules/nestjs-throttler-storage-redis/dist/throttler-storage-redis.service.js
+@@ -40,7 +40,7 @@ let ThrottlerStorageRedisService = class ThrottlerStorageRedisService {
+             .trim();
+     }
+     async increment(key, ttl) {
+-        const results = (await this.redis.call('EVAL', this.scriptSrc, 1, key, ttl * 1000));
++        const results = (await this.redis.call('EVAL', this.scriptSrc, 1, `${this.redis.options.keyPrefix || ''}${key}`, ttl * 1000));
+         if (!Array.isArray(results)) {
+             throw new TypeError(`Expected result to be array of values, got ${results}`);
+         }

@@ -1,0 +1,13 @@
+diff --git a/node_modules/passport-jwt/lib/extract_jwt.js b/node_modules/passport-jwt/lib/extract_jwt.js
+index 7f112ab..4dbab23 100644
+--- a/node_modules/passport-jwt/lib/extract_jwt.js
++++ b/node_modules/passport-jwt/lib/extract_jwt.js
+@@ -16,7 +16,7 @@ var extractors = {};
+ extractors.fromHeader = function (header_name) {
+     return function (request) {
+         var token = null;
+-        if (request.headers[header_name]) {
++        if (request.headers && request.headers[header_name]) {
+             token = request.headers[header_name];
+         }
+         return token;

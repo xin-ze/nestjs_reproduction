@@ -1,0 +1,13 @@
+diff --git a/node_modules/nest-raven/dist/raven.interceptor.js b/node_modules/nest-raven/dist/raven.interceptor.js
+index b73e520..d12fa8b 100644
+--- a/node_modules/nest-raven/dist/raven.interceptor.js
++++ b/node_modules/nest-raven/dist/raven.interceptor.js
+@@ -94,6 +94,8 @@ let RavenInterceptor = class RavenInterceptor {
+             this.options.transformers.forEach((transformer) => transformer(scope));
+         if (localTransformers)
+             localTransformers.forEach((transformer) => transformer(scope));
++        if (exception.response && exception.response.message)
++            scope.setExtra('responseMessage', exception.response.message);
+         (0, hub_1.captureException)(exception);
+     }
+     shouldReport(exception) {

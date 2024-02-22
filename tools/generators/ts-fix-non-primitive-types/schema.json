@@ -1,0 +1,6 @@
+{
+  "cli": "nx",
+  "id": "ts-fix-non-primitive-types",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,53 @@
+diff --git a/node_modules/node-vad/lib/vad.js b/node_modules/node-vad/lib/vad.js
+index c5590a5..2b220b8 100644
+--- a/node_modules/node-vad/lib/vad.js
++++ b/node_modules/node-vad/lib/vad.js
+@@ -2,6 +2,7 @@ const promisifyAll = require('util-promisifyall');
+ const {Transform} = require('stream');
+ const {Buffer} = require('buffer');
+ const binding = promisifyAll(require('bindings')('vad'));
++const alawmulaw = require('alawmulaw');
+ 
+ class VAD {
+ 
+@@ -57,7 +58,8 @@ class VADStream extends Transform {
+         {
+             mode = VAD.Mode.NORMAL,
+             audioFrequency = 16000,
+-            debounceTime = 1000
++            debounceTime = 1000,
++            mulaw = false
+         } = {}) {
+         super({
+             writableObjectMode: false,
+@@ -85,12 +87,14 @@ class VADStream extends Transform {
+ 
+         this.debounceTime = debounceTime;
+ 
+-        this.timeMultiplier = (1000 / this.audioFrequency) / 2;
++        this.timeMultiplier = (1000 / this.audioFrequency) / (mulaw ? 1 : 2);
+         this.chunkLength = 60 / this.timeMultiplier;
+         this.byteCount = 0;
+         this.state = false;
+         this.startTime = 0;
+         this.lastSpeech = 0;
++        this.mulaw = mulaw;
++        this.count = 0;
+ 
+         this.buffer = Buffer.alloc(0);
+     }
+@@ -120,7 +124,13 @@ class VADStream extends Transform {
+         const time = this.timeMultiplier * this.byteCount;
+         this.byteCount += chunk.length;
+ 
+-        return this.vad.processAudio(chunk, this.audioFrequency).then(event => {
++        let processedChunk = chunk;
++        if (this.mulaw) {
++            const decoded = alawmulaw.mulaw.decode(chunk);
++            processedChunk = Buffer.from(decoded.buffer);
++        }
++
++        return this.vad.processAudio(processedChunk, this.audioFrequency).then(event => {
+             if (event === VAD.Event.ERROR) {
+                 throw new Error("Error in VAD");
+             }

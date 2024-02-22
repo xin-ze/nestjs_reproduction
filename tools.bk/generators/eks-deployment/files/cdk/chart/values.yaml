@@ -1,0 +1,70 @@
+# Default values for <%= name %>-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: 919341117301.dkr.ecr.us-west-2.amazonaws.com/serverless/<%= name %>
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  # tag: v0.0.10837
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: false
+  name: "<%= name %>-service-sa"
+
+podAnnotations: 
+  # Fargate config https://docs.aws.amazon.com/eks/latest/userguide/fargate-pod-configuration.html
+  CapacityProvisioned: 0.5vCPU 1GB
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: <%= healthCheckPort %>
+
+resources: 
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  requests:
+    cpu: 500m
+    memory: 1Gi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 75
+  targetMemoryUtilizationPercentage: 80
+  # targetRequestCount: 120
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+healthCheck:
+  path: <%= healthCheckPath %>
+  port: <%= healthCheckPort %>
+
+env:
+  plain: {}
+  secret:
+    DD_API_KEY: datadog-agent-apikey
+    DD_CLUSTER_AGENT_AUTH_TOKEN: datadog-cluster-agent-token

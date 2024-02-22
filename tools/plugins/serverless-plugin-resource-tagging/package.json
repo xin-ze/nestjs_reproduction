@@ -1,0 +1,19 @@
+{
+  "name": "serverless-plugin-resource-tagging",
+  "version": "1.0.11",
+  "description": "Add tags to AWS resources",
+  "main": "index.js",
+  "keywords": [
+    "serverless plugin api gateway stage tagging",
+    "serverless plugin",
+    "api gateway stage tagging",
+    "aws serverless api gateway plugin",
+    "api gateway stack tagging",
+    "stackTags",
+    "api gateway"
+  ],
+  "author": "jerry",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}

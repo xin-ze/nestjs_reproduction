@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "id": "NxEksApp",
+  "title": "Create a Eks Deployment for Nx App",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the application.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Which app name would you like to add EKS deployment?",
+      "pattern": "^[a-zA-Z]{1}.*$"
+    },
+    "owner": {
+      "type": "string",
+      "description": "Provide the owner of the App",
+      "minLength": 2,
+      "x-prompt": "Who is the owner of app?"
+    },
+    "team": {
+      "type": "string",
+      "description": "Provide the team of the App",
+      "x-prompt": {
+        "type": "string",
+        "message": "Which team app belongs to?",
+        "items": ["Refi", "Seo", "Telematics", "Quoting", "Automation", "App", "Core", "DevOps", "Other"]
+      }
+    },
+    "dataSensitivity": {
+      "type": "string",
+      "description": "Provide the data sensitivity of the App",
+      "x-prompt": {
+        "type": "string",
+        "message": "Which data sensitivity level of the app?",
+        "items": ["Low", "Medium", "High"]
+      }
+    },
+    "healthCheckPath": {
+      "type": "string",
+      "description": "Provide the health check path of the App",
+      "x-prompt": "What's health check path?"
+    },
+    "healthCheckPort": {
+      "type": "number",
+      "description": "Provide the health check port of the App",
+      "x-prompt": {
+        "type": "number",
+        "message": "What's health check port?"
+      }
+    }
+  },
+  "required": ["name", "owner", "team", "dataSensitivity"]
+}

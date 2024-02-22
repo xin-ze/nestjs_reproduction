@@ -1,0 +1,51 @@
+{{- if .Values.autoscaling.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "<%= name %>-service.fullname" . }}
+  labels:
+    {{- include "<%= name %>-service.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "<%= name %>-service.fullname" . }}
+  minReplicas: {{ .Values.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.autoscaling.maxReplicas }}
+  metrics:
+    {{- if .Values.autoscaling.targetCPUUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          averageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
+          type: Utilization
+    {{- end }}
+    {{- if .Values.autoscaling.targetMemoryUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          averageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage }}
+          type: Utilization
+    {{- end }}
+    {{- if .Values.autoscaling.targetRequestCount }}
+    - type: External
+      external:
+        metric:
+          name: datadogmetric@<%= name %>-service:network-requests
+        target:
+          type: Value
+          value: {{ .Values.autoscaling.targetRequestCount }}
+    {{- end }}
+---
+{{- if .Values.autoscaling.targetRequestCount }}
+apiVersion: datadoghq.com/v1alpha1
+kind: DatadogMetric
+metadata:
+  name: network-requests
+spec:
+  maxAge: '900s'
+  query: sum:aws.applicationelb.request_count_per_target{service:<%= name %>-service,stage:{{ .Values.env.plain.release_env }}}.as_count().rollup(sum, 60)
+{{- end }}
+{{- end }}

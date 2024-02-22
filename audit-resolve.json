@@ -1,0 +1,1590 @@
+{
+  "decisions": {
+    "1091725|@bandwidth/messaging>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|@sendgrid/mail>@sendgrid/client>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|clevertap>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|front-sdk>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|nexmo>jsonwebtoken>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|node-gcm>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|node-zillow>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|nodemailer-sendgrid>@sendgrid/mail>@sendgrid/client>request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1091725|request": {
+      "decision": "ignore",
+      "madeAt": 1684023060226
+    },
+    "1089034|@bandwidth/messaging>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|@sendgrid/mail>@sendgrid/client>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|clevertap>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|front-sdk>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|nexmo>jsonwebtoken>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|node-gcm>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|node-zillow>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|nodemailer-sendgrid>@sendgrid/mail>@sendgrid/client>request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1089034|request>har-validator>ajv": {
+      "decision": "ignore",
+      "madeAt": 1684023066843
+    },
+    "1091837|@datadog/datadog-ci>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1684023071146
+    },
+    "1091837|aws-sdk>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1686098741979,
+      "expiresAt": 1688690685649
+    },
+    "1091837|node-zillow>request>har-validator>ajv>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1686098741979,
+      "expiresAt": 1688690685649
+    },
+    "1091837|typeorm>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1686098741979,
+      "expiresAt": 1688690685649
+    },
+    "1091837|xml2js": {
+      "decision": "ignore",
+      "madeAt": 1686098741979,
+      "expiresAt": 1688690685649
+    },
+    "1089485|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1684023086407,
+      "expiresAt": 1686614983307
+    },
+    "1089486|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1684023093251,
+      "expiresAt": 1686614983307
+    },
+    "1090022|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1684023097545
+    },
+    "1088710|@graphql-tools/url-loader>cross-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684023106118
+    },
+    "1088710|graphql-tools>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684025626576
+    },
+    "1091239|@graphql-tools/url-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1691985106595
+    },
+    "1091239|graphql-tools>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1692011925433
+    },
+    "1091239|node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1691985106595
+    },
+    "1091239|relay-runtime>fbjs>isomorphic-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1692011925433
+    },
+    "1091791|@graphql-tools/url-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684023130517
+    },
+    "1091791|graphql-tools>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684025636433
+    },
+    "1091791|node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684025636433
+    },
+    "1091791|relay-runtime>fbjs>isomorphic-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415983935
+    },
+    "1091367|@nestjs/cli>webpack": {
+      "decision": "ignore",
+      "madeAt": 1691985111223
+    },
+    "1088997|@nestjs/graphql>apollo-server-testing>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1684023153821,
+      "expiresAt": 1686614983307
+    },
+    "1088997|apollo-server-express>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1684023153821,
+      "expiresAt": 1686614983307
+    },
+    "1088997|apollo-server-lambda>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1684023153821,
+      "expiresAt": 1686614983307
+    },
+    "1088997|apollo-server-testing>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1684023153821,
+      "expiresAt": 1686614983307
+    },
+    "1088997|firebase-admin>dicer": {
+      "decision": "ignore",
+      "madeAt": 1684023153821,
+      "expiresAt": 1686614983307
+    },
+    "1088997|middy>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1684023153821,
+      "expiresAt": 1686614983307
+    },
+    "1089434|@nestjs/jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|apn>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|docusign-esign>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|firebase-admin>dicer>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|nexmo>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|passport-jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1089434|twilio>axios>follow-redirects>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023158119
+    },
+    "1091087|@nestjs/jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|apn>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|docusign-esign>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|firebase-admin>dicer>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|nexmo>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|passport-jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091087|twilio>axios>follow-redirects>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023161118
+    },
+    "1091170|@nestjs/jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|apn>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|docusign-esign>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|firebase-admin>dicer>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|nexmo>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|passport-jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1091170|twilio>axios>follow-redirects>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1684023163700
+    },
+    "1088227|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023166168
+    },
+    "1088227|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023166168
+    },
+    "1088228|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023167975
+    },
+    "1088228|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023167975
+    },
+    "1088229|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023171649
+    },
+    "1088229|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023171649
+    },
+    "1088746|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023175447
+    },
+    "1088746|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023175447
+    },
+    "1090460|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023177266
+    },
+    "1090460|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1684023177266
+    },
+    "1091350|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1691985125471
+    },
+    "1091350|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1691985125471
+    },
+    "1091351|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1691985127532
+    },
+    "1091351|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1691985127532
+    },
+    "1091353|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1691985129190
+    },
+    "1091353|firebase-admin>dicer>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1691985129190
+    },
+    "1090049|axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|nestjs-redis>@nestjs/common>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|twilio>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1091366|axios": {
+      "decision": "postpone",
+      "madeAt": 1691985135221
+    },
+    "1091366|nestjs-redis>@nestjs/common>axios": {
+      "decision": "postpone",
+      "madeAt": 1691985135221
+    },
+    "1091366|twilio>axios": {
+      "decision": "postpone",
+      "madeAt": 1691985135221
+    },
+    "1090431|axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1684023199657
+    },
+    "1090431|nestjs-redis>@nestjs/common>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1684023199657
+    },
+    "1090431|twilio>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1684023199657
+    },
+    "1091238|axios>follow-redirects": {
+      "decision": "postpone",
+      "madeAt": 1691985143342
+    },
+    "1091238|nestjs-redis>@nestjs/common>axios>follow-redirects": {
+      "decision": "postpone",
+      "madeAt": 1691985143342
+    },
+    "1091238|twilio>axios>follow-redirects": {
+      "decision": "postpone",
+      "madeAt": 1691985143342
+    },
+    "1090137|body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1692011928699
+    },
+    "1090137|express>body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1692011928699
+    },
+    "1090137|formidable>qs": {
+      "decision": "ignore",
+      "madeAt": 1692011928699
+    },
+    "1090139|body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1692011932376
+    },
+    "1090139|express>body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1692011932376
+    },
+    "1090139|formidable>qs": {
+      "decision": "ignore",
+      "madeAt": 1692011932376
+    },
+    "1088667|cache-manager>async": {
+      "decision": "ignore",
+      "madeAt": 1684023215232,
+      "expiresAt": 1686614983307
+    },
+    "1088816|class-validator": {
+      "decision": "ignore",
+      "madeAt": 1691985163223
+    },
+    "1088659|cookiejar": {
+      "decision": "ignore",
+      "madeAt": 1684023223262
+    },
+    "1091652|decode-uri-component": {
+      "decision": "ignore",
+      "madeAt": 1684023226613,
+      "expiresAt": 1686614983307
+    },
+    "1089630|docusign-esign>jsonwebtoken>passport-oauth2": {
+      "decision": "ignore",
+      "madeAt": 1684023234536
+    },
+    "1089280|echarts>zrender": {
+      "decision": "ignore",
+      "madeAt": 1684023236864
+    },
+    "1088767|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout": {
+      "decision": "ignore",
+      "madeAt": 1692011940777
+    },
+    "1089241|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout": {
+      "decision": "ignore",
+      "madeAt": 1692011943646
+    },
+    "1089123|file-type": {
+      "decision": "ignore",
+      "madeAt": 1684023250421,
+      "expiresAt": 1686614983307
+    },
+    "1090037|graphql-tools>@graphql-tools/git-loader": {
+      "decision": "ignore",
+      "madeAt": 1691985218634
+    },
+    "1091832|graphql-tools>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch>@graphql-tools/links>@graphql-tools/relay-operation-optimizer>relay-compiler>fbjs>isomorphic-fetch>relay-runtime>@graphql-tools/resolvers-composition>lodash": {
+      "decision": "ignore",
+      "madeAt": 1692011947195
+    },
+    "1091832|lodash": {
+      "decision": "ignore",
+      "madeAt": 1684023256472,
+      "expiresAt": 1686614983307
+    },
+    "1091860|graphql-tools>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch>@graphql-tools/links>@graphql-tools/relay-operation-optimizer>relay-compiler>fbjs>isomorphic-fetch>relay-runtime>@graphql-tools/resolvers-composition>lodash": {
+      "decision": "ignore",
+      "madeAt": 1684023263085
+    },
+    "1091860|lodash": {
+      "decision": "ignore",
+      "madeAt": 1684023263085
+    },
+    "1091807|http-cache-semantics": {
+      "decision": "ignore",
+      "madeAt": 1684023265933
+    },
+    "1091148|json5": {
+      "decision": "ignore",
+      "madeAt": 1684023269391,
+      "expiresAt": 1686614983307
+    },
+    "1091187|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1691985238429
+    },
+    "1091250|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1691985241345
+    },
+    "1091567|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1684023277077,
+      "expiresAt": 1686614983307
+    },
+    "1090160|luxon": {
+      "decision": "ignore",
+      "madeAt": 1692011959899
+    },
+    "1088796|mathjs": {
+      "decision": "ignore",
+      "madeAt": 1684023281404,
+      "expiresAt": 1686614983307
+    },
+    "1091325|nestjs-redis>@nestjs/common>axios>follow-redirects>@nestjs/core": {
+      "decision": "ignore",
+      "madeAt": 1684023283360
+    },
+    "1088907|passport": {
+      "decision": "ignore",
+      "madeAt": 1684023286166
+    },
+    "1091834|payload": {
+      "decision": "ignore",
+      "madeAt": 1684023289169,
+      "expiresAt": 1686614983307
+    },
+    "1088967|posix": {
+      "decision": "ignore",
+      "madeAt": 1692011961667
+    },
+    "1089196|redis-weighted-pool>redis": {
+      "decision": "ignore",
+      "madeAt": 1692011964513
+    },
+    "1091121|sequelize": {
+      "decision": "ignore",
+      "madeAt": 1684023300459
+    },
+    "1091130|sequelize": {
+      "decision": "ignore",
+      "madeAt": 1684023302687
+    },
+    "1091134|sequelize": {
+      "decision": "ignore",
+      "madeAt": 1684023307999
+    },
+    "1091149|sequelize": {
+      "decision": "ignore",
+      "madeAt": 1684023313422
+    },
+    "1089600|sequelize>validator": {
+      "decision": "ignore",
+      "madeAt": 1684023318027
+    },
+    "1089538|sharp": {
+      "decision": "ignore",
+      "madeAt": 1684023320030
+    },
+    "1089641|ssh2-sftp-client>ssh2": {
+      "decision": "ignore",
+      "madeAt": 1692011975491
+    },
+    "1085394|swagger-ui-express>swagger-ui-dist": {
+      "decision": "ignore",
+      "madeAt": 1684023327245
+    },
+    "1088759|swagger-ui-express>swagger-ui-dist": {
+      "decision": "ignore",
+      "madeAt": 1684023329722
+    },
+    "1088697|ua-parser-js": {
+      "decision": "ignore",
+      "madeAt": 1684023332020,
+      "expiresAt": 1686614983307
+    },
+    "1089491|ua-parser-js": {
+      "decision": "ignore",
+      "madeAt": 1684023335009,
+      "expiresAt": 1686614983307
+    },
+    "1089914|ua-parser-js": {
+      "decision": "ignore",
+      "madeAt": 1684023336970,
+      "expiresAt": 1686614983307
+    },
+    "1089977|ua-parser-js": {
+      "decision": "ignore",
+      "madeAt": 1684023339852,
+      "expiresAt": 1686614983307
+    },
+    "1091646|vm2": {
+      "decision": "ignore",
+      "madeAt": 1684023348694,
+      "expiresAt": 1686614983307
+    },
+    "1091727|vm2": {
+      "decision": "ignore",
+      "madeAt": 1684023351144,
+      "expiresAt": 1686614983307
+    },
+    "1091758|vm2": {
+      "decision": "ignore",
+      "madeAt": 1684023358679,
+      "expiresAt": 1686614983307
+    },
+    "1089698|xlsx": {
+      "decision": "ignore",
+      "madeAt": 1684023361429
+    },
+    "1089699|xlsx": {
+      "decision": "ignore",
+      "madeAt": 1684023363619
+    },
+    "1089700|xlsx": {
+      "decision": "ignore",
+      "madeAt": 1684023365280
+    },
+    "1091868|xlsx": {
+      "decision": "ignore",
+      "madeAt": 1684023368093,
+      "expiresAt": 1686614983307
+    },
+    "1088710|@graphql-tools/github-loader>cross-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684025626576
+    },
+    "1091239|@graphql-tools/github-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1692011925433
+    },
+    "1091791|@graphql-tools/github-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1684025636433
+    },
+    "1092096|xlsx": {
+      "decision": "ignore",
+      "madeAt": 1685680562389
+    },
+    "1092160|swagger-ui-express>swagger-ui-dist": {
+      "decision": "ignore",
+      "madeAt": 1686042502334
+    },
+    "1092243|@aws-sdk/client-cloudwatch-logs>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|@aws-sdk/client-dynamodb>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|@aws-sdk/client-glue>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|@aws-sdk/client-lambda>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|@aws-sdk/client-s3>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|@aws-sdk/client-ssm>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1686098737110,
+      "expiresAt": 1688690685649
+    },
+    "1092243|@aws-sdk/client-textract>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|@datadog/datadog-ci>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1092243|fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985012580
+    },
+    "1091837|@datadog/datadog-ci>fast-xml-parser>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1686098741979,
+      "expiresAt": 1688690685649
+    },
+    "1092275|@aws-sdk/client-cloudwatch-logs>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027068
+    },
+    "1092275|@aws-sdk/client-dynamodb>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027068
+    },
+    "1092275|@aws-sdk/client-glue>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027068
+    },
+    "1092275|@aws-sdk/client-lambda>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027069
+    },
+    "1092275|@aws-sdk/client-s3>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027069
+    },
+    "1092275|@aws-sdk/client-textract>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027069
+    },
+    "1092275|@datadog/datadog-ci>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027069
+    },
+    "1092275|fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1691985027069
+    },
+    "1092826|@bandwidth/messaging>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|@sendgrid/mail>@sendgrid/client>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|clevertap>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|front-sdk>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|nexmo>jsonwebtoken>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|node-gcm>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|node-zillow>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|nodemailer-sendgrid>@sendgrid/mail>@sendgrid/client>request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092826|request": {
+      "decision": "ignore",
+      "madeAt": 1691985033071
+    },
+    "1092470|@bandwidth/messaging>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|@sendgrid/mail>@sendgrid/client>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|clevertap>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|front-sdk>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|nexmo>jsonwebtoken>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|node-gcm>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|node-zillow>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|nodemailer-sendgrid>@sendgrid/mail>@sendgrid/client>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|request-promise>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092470|request-promise-native>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1691985044222
+    },
+    "1092665|@datadog/datadog-ci>fast-xml-parser>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1691985059121,
+      "expiresAt": 1694531239272
+    },
+    "1092665|@nestjs-modules/mailer>inline-css>extract-css>href-content>remote-content>superagent-proxy>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1691985059121,
+      "expiresAt": 1694531239272
+    },
+    "1092665|vm2": {
+      "decision": "ignore",
+      "madeAt": 1691985059121,
+      "expiresAt": 1694531239272
+    },
+    "1092666|@datadog/datadog-ci>fast-xml-parser>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1691985063025,
+      "expiresAt": 1694531239272
+    },
+    "1092666|@nestjs-modules/mailer>inline-css>extract-css>href-content>remote-content>superagent-proxy>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1691985063025,
+      "expiresAt": 1694531239272
+    },
+    "1092666|vm2": {
+      "decision": "ignore",
+      "madeAt": 1691985063025,
+      "expiresAt": 1694531239272
+    },
+    "1092301|@datadog/datadog-ci>fast-xml-parser>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1691985072993
+    },
+    "1092301|aws-sdk>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1701415973000
+    },
+    "1092301|node-zillow>request>har-validator>ajv>tough-cookie>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1701415973000
+    },
+    "1092301|typeorm>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1701415973000
+    },
+    "1092301|xml2js": {
+      "decision": "ignore",
+      "madeAt": 1701415973000
+    },
+    "1092754|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1691985083621
+    },
+    "1092755|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1691985086458
+    },
+    "1092429|@google-cloud/dialogflow-cx>google-gax>@grpc/proto-loader>protobufjs": {
+      "decision": "ignore",
+      "madeAt": 1691985094132
+    },
+    "1092429|@google-cloud/firestore>google-gax>@grpc/proto-loader>protobufjs": {
+      "decision": "ignore",
+      "madeAt": 1691985094132
+    },
+    "1092759|@nestjs/graphql>apollo-server-testing>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1691985114885
+    },
+    "1092759|apollo-server-express>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1691985114885
+    },
+    "1092759|apollo-server-lambda>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1691985114885
+    },
+    "1092759|apollo-server-testing>apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1691985114885
+    },
+    "1092759|firebase-admin>dicer": {
+      "decision": "ignore",
+      "madeAt": 1691985114885
+    },
+    "1092759|middy>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1691985114885
+    },
+    "1092549|@nestjs/jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|apn>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|docusign-esign>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|firebase-admin>dicer>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|nexmo>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|passport-jwt>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092549|twilio>axios>follow-redirects>jsonwebtoken": {
+      "decision": "ignore",
+      "madeAt": 1691985119372
+    },
+    "1092623|axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|nestjs-redis>@nestjs/common>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|twilio>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092892|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1691985244067
+    },
+    "1092964|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1692011915987
+    },
+    "1092969|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1692011918233
+    },
+    "1092424|cache-manager>async": {
+      "decision": "ignore",
+      "madeAt": 1692011934667
+    },
+    "1088796|coverage-validation>mathjs": {
+      "decision": "ignore",
+      "madeAt": 1692011936628
+    },
+    "1092262|dottie": {
+      "decision": "ignore",
+      "madeAt": 1692011938720
+    },
+    "1092316|http-cache-semantics": {
+      "decision": "ignore",
+      "madeAt": 1692011949709
+    },
+    "1092426|json5": {
+      "decision": "ignore",
+      "madeAt": 1692011958015
+    },
+    "1092459|semver": {
+      "decision": "ignore",
+      "madeAt": 1692011966492
+    },
+    "1092460|semver": {
+      "decision": "ignore",
+      "madeAt": 1692011968091
+    },
+    "1092461|semver": {
+      "decision": "ignore",
+      "madeAt": 1692011969783
+    },
+    "1092430|sequelize>validator": {
+      "decision": "ignore",
+      "madeAt": 1692011971344
+    },
+    "1092354|sharp": {
+      "decision": "ignore",
+      "madeAt": 1701416045803
+    },
+    "1092593|word-wrap": {
+      "decision": "ignore",
+      "madeAt": 1692011977388
+    },
+    "1095016|@aws-sdk/client-cloudwatch-logs>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|@aws-sdk/client-dynamodb>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|@aws-sdk/client-glue>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|@aws-sdk/client-lambda>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|@aws-sdk/client-s3>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|@aws-sdk/client-textract>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|@datadog/datadog-ci>axios>follow-redirects>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095016|fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415950167
+    },
+    "1095017|@aws-sdk/client-cloudwatch-logs>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|@aws-sdk/client-dynamodb>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|@aws-sdk/client-glue>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|@aws-sdk/client-lambda>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|@aws-sdk/client-s3>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|@aws-sdk/client-textract>@aws-sdk/client-sts>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|@datadog/datadog-ci>axios>follow-redirects>fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1095017|fast-xml-parser": {
+      "decision": "ignore",
+      "madeAt": 1701415952621
+    },
+    "1092972|@bandwidth/messaging>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|@sendgrid/mail>@sendgrid/client>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|clevertap>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|front-sdk>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|nexmo>jsonwebtoken>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|node-gcm>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|node-zillow>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|nodemailer-sendgrid>@sendgrid/mail>@sendgrid/client>request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1092972|request": {
+      "decision": "ignore",
+      "madeAt": 1701415954454
+    },
+    "1095102|@bandwidth/messaging>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|@sendgrid/mail>@sendgrid/client>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|clevertap>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|facebook-nodejs-business-sdk>iso-3166-1-alpha-2>mout>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|front-sdk>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|nexmo>jsonwebtoken>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|node-gcm>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|node-zillow>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|nodemailer-sendgrid>@sendgrid/mail>@sendgrid/client>request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|request>har-validator>ajv>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|request-promise>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1095102|request-promise-native>tough-cookie": {
+      "decision": "ignore",
+      "madeAt": 1701415956231
+    },
+    "1090049|@datadog/datadog-ci>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|@googlemaps/google-maps-services-js>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|@nestjs/axios>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|axios-ntlm>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|contentful>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|google-spreadsheet>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1090049|react-contentful>contentful>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415957958
+    },
+    "1094889|@datadog/datadog-ci>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|@googlemaps/google-maps-services-js>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|@nestjs/axios>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|axios-ntlm>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|contentful>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|google-spreadsheet>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|nestjs-redis>@nestjs/common>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|react-contentful>contentful>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1094889|twilio>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415961087
+    },
+    "1095000|@datadog/datadog-ci>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|@googlemaps/google-maps-services-js>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|@nestjs/axios>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|axios-ntlm>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|contentful>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|google-spreadsheet>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|nestjs-redis>@nestjs/common>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|react-contentful>contentful>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1095000|twilio>axios": {
+      "decision": "ignore",
+      "madeAt": 1701415963844
+    },
+    "1092623|@datadog/datadog-ci>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|@googlemaps/google-maps-services-js>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|@nestjs/axios>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|axios-ntlm>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|contentful>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|google-spreadsheet>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1092623|react-contentful>contentful>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415965820
+    },
+    "1095014|@datadog/datadog-ci>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|@googlemaps/google-maps-services-js>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|@nestjs/axios>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|axios-ntlm>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|contentful>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|google-spreadsheet>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|nestjs-redis>@nestjs/common>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|react-contentful>contentful>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1095014|twilio>axios>follow-redirects": {
+      "decision": "ignore",
+      "madeAt": 1701415967579
+    },
+    "1094550|@datadog/datadog-ci>axios>follow-redirects>fast-xml-parser>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1701415969287
+    },
+    "1094550|@nestjs-modules/mailer>inline-css>extract-css>href-content>remote-content>superagent-proxy>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1701415969287
+    },
+    "1094550|vm2": {
+      "decision": "ignore",
+      "madeAt": 1701415969287
+    },
+    "1094744|@datadog/datadog-ci>axios>follow-redirects>fast-xml-parser>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1701415971166
+    },
+    "1094744|@nestjs-modules/mailer>inline-css>extract-css>href-content>remote-content>superagent-proxy>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2": {
+      "decision": "ignore",
+      "madeAt": 1701415971166
+    },
+    "1094744|vm2": {
+      "decision": "ignore",
+      "madeAt": 1701415971166
+    },
+    "1092301|@datadog/datadog-ci>axios>follow-redirects>fast-xml-parser>proxy-agent>pac-proxy-agent>pac-resolver>degenerator>vm2>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1701415973000
+    },
+    "1092301|sitemapper>xml2js": {
+      "decision": "ignore",
+      "madeAt": 1701415973000
+    },
+    "1095051|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1701415974903
+    },
+    "1095052|@getjerry/marksy-lite>marked": {
+      "decision": "ignore",
+      "madeAt": 1701415976613
+    },
+    "1095136|@google-cloud/dialogflow-cx>google-gax>protobufjs": {
+      "decision": "ignore",
+      "madeAt": 1701415978224
+    },
+    "1094796|@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse": {
+      "decision": "ignore",
+      "madeAt": 1701415980628
+    },
+    "1094796|@graphql-tools/github-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse": {
+      "decision": "ignore",
+      "madeAt": 1701415980628
+    },
+    "1094796|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse": {
+      "decision": "ignore",
+      "madeAt": 1701415980628
+    },
+    "1088710|@graphql-tools/github-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>cross-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415982285
+    },
+    "1088710|@graphql-tools/links>cross-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415982285
+    },
+    "1088710|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415982285
+    },
+    "1091791|@graphql-tools/github-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415983935
+    },
+    "1091791|@graphql-tools/links>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415983935
+    },
+    "1091791|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415983935
+    },
+    "1095073|@graphql-tools/github-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701415985550
+    },
+    "1095073|@graphql-tools/links>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701416203673
+    },
+    "1095073|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701416203673
+    },
+    "1095073|relay-runtime>fbjs>isomorphic-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701416203673
+    },
+    "1094471|@nestjs/cli>webpack": {
+      "decision": "ignore",
+      "madeAt": 1701415987549
+    },
+    "1093719|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1701415989260
+    },
+    "1095011|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1701415990903
+    },
+    "1095012|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1701415997967
+    },
+    "1095013|apn>jsonwebtoken>node-forge": {
+      "decision": "ignore",
+      "madeAt": 1701416004312
+    },
+    "1093150|apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1701416006298
+    },
+    "1093150|middy>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1701416006299
+    },
+    "1093178|apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1701416008935
+    },
+    "1093179|apollo-server-core>@apollographql/graphql-upload-8-fork>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1701416014201
+    },
+    "1094099|body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1701416016282
+    },
+    "1094099|express>body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1701416016282
+    },
+    "1094099|formidable>qs": {
+      "decision": "ignore",
+      "madeAt": 1701416016282
+    },
+    "1094101|body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1701416018122
+    },
+    "1094101|express>body-parser>qs": {
+      "decision": "ignore",
+      "madeAt": 1701416018122
+    },
+    "1094101|formidable>qs": {
+      "decision": "ignore",
+      "madeAt": 1701416018122
+    },
+    "1095002|cache-manager>async": {
+      "decision": "ignore",
+      "madeAt": 1701416019821
+    },
+    "1094982|crypto-js": {
+      "decision": "ignore",
+      "madeAt": 1701416021597
+    },
+    "1095024|dottie": {
+      "decision": "ignore",
+      "madeAt": 1701416023316
+    },
+    "1090037|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>@graphql-tools/git-loader": {
+      "decision": "ignore",
+      "madeAt": 1701416025155
+    },
+    "1094498|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch>@graphql-tools/links>@graphql-tools/relay-operation-optimizer>relay-compiler>fbjs>isomorphic-fetch>relay-runtime>@graphql-tools/resolvers-composition>lodash": {
+      "decision": "ignore",
+      "madeAt": 1701416026902
+    },
+    "1094500|graphql-tools>@graphql-tools/code-file-loader>@graphql-tools/graphql-tag-pluck>@babel/traverse>@graphql-tools/git-loader>@graphql-tools/github-loader>cross-fetch>node-fetch>@graphql-tools/links>@graphql-tools/relay-operation-optimizer>relay-compiler>fbjs>isomorphic-fetch>relay-runtime>@graphql-tools/resolvers-composition>lodash": {
+      "decision": "ignore",
+      "madeAt": 1701416028693
+    },
+    "1094987|json5": {
+      "decision": "ignore",
+      "madeAt": 1701416030443
+    },
+    "1094083|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1701416032100
+    },
+    "1094089|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1701416033752
+    },
+    "1095054|loader-utils": {
+      "decision": "ignore",
+      "madeAt": 1701416035361
+    },
+    "1094729|next": {
+      "decision": "ignore",
+      "madeAt": 1701416037144
+    },
+    "1094544|next>postcss": {
+      "decision": "ignore",
+      "madeAt": 1701416039001
+    },
+    "1094571|openpgp": {
+      "decision": "ignore",
+      "madeAt": 1701416040670
+    },
+    "1093639|passport": {
+      "decision": "ignore",
+      "madeAt": 1701416042369
+    },
+    "1094774|payload>mongoose>mongodb": {
+      "decision": "ignore",
+      "madeAt": 1701416044010
+    },
+    "1092354|payload>mongoose>mongodb>sharp": {
+      "decision": "ignore",
+      "madeAt": 1701416045803
+    },
+    "1094888|payload>mongoose>mongodb>sharp": {
+      "decision": "ignore",
+      "madeAt": 1701416047521
+    },
+    "1094888|sharp": {
+      "decision": "ignore",
+      "madeAt": 1701416047521
+    },
+    "1094554|semver": {
+      "decision": "ignore",
+      "madeAt": 1701416049290
+    },
+    "1094555|semver": {
+      "decision": "ignore",
+      "madeAt": 1701416050842
+    },
+    "1094556|semver": {
+      "decision": "ignore",
+      "madeAt": 1701416052397
+    },
+    "1095093|sequelize>validator": {
+      "decision": "ignore",
+      "madeAt": 1701416054168
+    },
+    "1095091|word-wrap": {
+      "decision": "ignore",
+      "madeAt": 1701416058342
+    },
+    "1094599|xlsx": {
+      "decision": "ignore",
+      "madeAt": 1701416060128
+    },
+    "1094652|zod": {
+      "decision": "ignore",
+      "madeAt": 1701416061812
+    },
+    "1095073|@graphql-tools/url-loader>cross-fetch>node-fetch": {
+      "decision": "ignore",
+      "madeAt": 1701416203673
+    }
+  },
+  "rules": {},
+  "version": 1
+}

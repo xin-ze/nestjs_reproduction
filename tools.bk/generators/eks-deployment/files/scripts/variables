@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export SERVICE_NAME='<%= name %>'
+export REGISTRY_NAME=919341117301.dkr.ecr.us-west-2.amazonaws.com
+export IMAGE_NAME=$REGISTRY_NAME/serverless/$SERVICE_NAME
+if [[ $(git tag --points-at HEAD --list 'v*') ]]; then
+  export TAG=$(git tag --points-at HEAD --list 'v*')
+else
+  export TAG=$(git rev-parse --short HEAD)
+fi

@@ -1,0 +1,14 @@
+#!/bin/bash -e
+cd "$(dirname $0)"/..
+
+source ./scripts/variables
+
+cd ../..
+
+# need access to base image which is hosted on aws managed docker hub
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $REGISTRY_NAME
+# Try pull latest image and leverage the docker cache
+[[ $CI == "true" ]] && docker pull $IMAGE_NAME:latest || true
+# Use root folder of serverless repo for using shared dependencies
+# CI docker cache: https://github.com/moby/moby/issues/39003#issuecomment-879441675
+DOCKER_BUILDKIT=1 docker build --platform=linux/amd64 -t $SERVICE_NAME -f apps/$SERVICE_NAME/Dockerfile --build-arg GIT_CREDENTIALS=$GIT_CREDENTIALS --build-arg BUILDKIT_INLINE_CACHE=1 --cache-from $IMAGE_NAME:latest .

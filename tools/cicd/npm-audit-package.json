@@ -1,0 +1,15 @@
+{
+  "name": "npm-audit",
+  "version": "1.0.0",
+  "description": "Run npm audit and resolve vulnerabilities",
+  "scripts": {
+    "resolve-audit": "npx resolve-audit --audit-level critical --omit dev",
+    "check-audit": "npx check-audit --audit-level critical --omit dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-audit-resolver": "3.0.0-RC.0"
+  }
+}

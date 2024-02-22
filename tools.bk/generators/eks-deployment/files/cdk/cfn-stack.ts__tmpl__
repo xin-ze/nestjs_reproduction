@@ -1,0 +1,53 @@
+import assert from 'assert';
+import path from 'path';
+
+import type { HelmChartServiceStackProps } from '@jerry-serverless/ecs-stack';
+import { HelmChartServiceStack, ChartValuesBuilder } from '@jerry-serverless/ecs-stack';
+
+// All possible stages
+const STAGES = ['stage', 'prod'];
+
+assert(STAGES.includes(process.env.ENV || ''), `ENV must be one of these: [ 'stage', 'prod' ]`);
+// Provide from external
+assert(process.env.TAG, `Must provide deploy version as TAG (eg. 0.1.3400)`);
+
+const ENV = process.env.ENV || 'stage';
+const TAG = process.env.TAG || 'latest';
+
+const chartValues = ChartValuesBuilder.builder(path.join(__dirname, `chart/values.yaml`))
+  .withOverride(path.join(__dirname, `chart/values-${ENV}.yaml`))
+  .withOverrideEnv(path.join(__dirname, `../scripts/envs/<%= name %>.env.${ENV}`))
+  .withSet('image.tag', TAG)
+  .withSet('env.plain.VERSION', TAG)
+  .withSet('podAnnotations.createdAt', new Date())
+  .build();
+
+const stackProps: HelmChartServiceStackProps = {
+  tags: {
+    Env: ENV,
+    Owner: '<%= pascalCase(owner) %>',
+    Lob: 'Jerry',
+    Function: '<%= pascalCase(name) %>Service',
+    Department: '<%= pascalCase(team) %>',
+    DataSensitivity: '<%= dataSensitivity %>',
+    Version: TAG,
+  },
+  deployEnv: ENV,
+  identifier: process.env.IDENTIFIER || ENV,
+  name: '<%= name %>-service',
+  clusterName: ENV === 'prod' ? 'prodCluster' : 'stagingCluster',
+  serviceAccounts: [
+    {
+      name: '<%= name %>-service-sa',
+      policies: [],
+    },
+  ],
+  chartOptions: {
+    path: path.join(__dirname, 'chart'),
+    namespace: '<%= name %>-service',
+    release: '<%= name %>-service',
+    values: chartValues,
+  },
+};
+
+HelmChartServiceStack.build(`<%= pascalCase(name) %>Stack`, stackProps);

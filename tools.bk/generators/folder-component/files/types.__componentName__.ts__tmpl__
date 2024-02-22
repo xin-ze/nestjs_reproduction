@@ -1,0 +1,9 @@
+import { ReactNode } from 'react';
+
+export interface <%= componentName %>Props {
+  children?: ReactNode;
+}
+
+export interface <%= componentName %>HookProps {
+  loading: boolean;
+}
