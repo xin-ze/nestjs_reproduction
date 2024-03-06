@@ -1,0 +1,11 @@
+#!/bin/bash -e
+cd "$(dirname $0)"/..
+
+source ./scripts/variables
+
+cd ../../..
+
+# need access to base image which is hosted on aws managed docker hub
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $REGISTRY_NAME
+# Use root folder of serverless repo for using shared dependencies
+DOCKER_BUILDKIT=1 docker build -t $SERVICE_NAME -f apps/seo-submodule/$SERVICE_NAME/Dockerfile --build-arg GIT_CREDENTIALS=$GIT_CREDENTIALS .

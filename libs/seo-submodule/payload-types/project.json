@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/seo-submodule/payload-types/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/seo-submodule/payload-types/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/seo-submodule/payload-types"],
+      "options": {
+        "jestConfig": "libs/seo-submodule/payload-types/jest.config.ts",
+        "passWithNoTests": true,
+        "outputFile": "tmp/payload-types.output.json"
+      }
+    },
+    "generate": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "PAYLOAD_CONFIG_PATH=apps/seo-submodule/seo-payload/src/payload.config.ts ts-node --project apps/seo-submodule/seo-payload/tsconfig.app.json -r tsconfig-paths/register ./node_modules/payload/dist/bin/index.js generate:types"
+      }
+    },
+    "ts-codegen": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx run payload-types:generate",
+          "regex-replace 'tslint:disable' 'eslint-disable' libs/seo-submodule/payload-types/src/generated/payload-types.ts",
+          "regex-replace 'payload generate:types' 'nx run payload-types:ts-codegen' libs/seo-submodule/payload-types/src/generated/payload-types.ts",
+          "regex-replace 'export interface Config' 'import { PayloadRichText } from \"./PayloadRichText\"; export interface Config' libs/seo-submodule/payload-types/src/generated/payload-types.ts",
+          "regex-replace '\\{\n *\\[k: string\\]: unknown;\n *\\}\\[\\]' 'PayloadRichText' libs/seo-submodule/payload-types/src/generated/payload-types.ts",
+          "nx format:write --uncommitted"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

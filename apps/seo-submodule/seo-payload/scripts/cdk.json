@@ -1,0 +1,7 @@
+{
+  "app": "npx ts-node -r tsconfig-paths/register cfn-stack.ts",
+  "output": "../../../dist/apps/seo-submodule/seo-payload",
+  "context": {
+    "aws-cdk:enableDiffNoFail": "true"
+  }
+}

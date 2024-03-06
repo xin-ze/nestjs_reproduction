@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "content": "apps/content"
+    "payload-types": "libs/seo-submodule/payload-types",
+    "seo-payload": "apps/seo-submodule/seo-payload"
   }
 }

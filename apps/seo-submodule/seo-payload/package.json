@@ -1,0 +1,49 @@
+{
+    "name": "seo-payload",
+    "version": "1.0.0",
+    "description": "CMS",
+    "main": "src/app/main.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/getjerry/jerry-serverless.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/getjerry/jerry-serverless/issues"
+    },
+    "homepage": "https://github.com/getjerry/jerry-serverless#readme",
+    "dependencies": {
+        "payload": "2.3.1",
+        "graphql": "16.8.1",
+        "mongoose": "6.11.3",
+        "@payloadcms/bundler-webpack": "1.0.5",
+        "@payloadcms/db-mongodb": "1.0.8",
+        "@payloadcms/richtext-lexical": "0.3.0",
+        "@payloadcms/richtext-slate": "1.2.1",
+        "@payloadcms/plugin-redirects": "1.0.1",
+        "@payloadcms/plugin-seo": "1.0.15",
+        "payload-s3-upload": "2.1.0"
+    },
+    "resolutions": {
+        "graphql": "16.8.1"
+    },
+    "overrides": {
+        "graphql": "16.8.1",
+        "mongodb": "3.5.7",
+        "payload": {
+            "mongoose": "6.11.3",
+            "graphql": "16.8.1",
+            "graphql-http": {
+              ".": "1.21.0",
+              "graphql": "16.8.1"
+            },
+            "graphql-query-complexity": {
+              "graphql": "16.8.1"
+            }
+          }
+    }
+}
